@@ -1,0 +1,34 @@
+# export PATH="/opt/homebrew/opt/llvm/bin:$PATH"
+# export PATH="/usr/local/opt/llvm/bin:$PATH"
+
+
+alias arm='env /usr/bin/arch -arm64 /bin/zsh --login'
+alias intel='env /usr/bin/arch -x86_64 /bin/zsh --login'
+
+HISTSIZE=10000
+SAVEHIST=5000
+
+
+# export HISTTIMEFORMAT="%m/%d/%y %T "
+HISTTIMEFORMAT='%F, %T '
+
+setopt HIST_EXPIRE_DUPS_FIRST
+setopt HIST_IGNORE_DUPS
+setopt HIST_IGNORE_ALL_DUPS
+setopt HIST_IGNORE_SPACE
+setopt HIST_FIND_NO_DUPS
+setopt HIST_SAVE_NO_DUPS
+setopt INC_APPEND_HISTORY
+
+unsetopt BEEP
+
+PS1="%1~ %# "
+
+# If you need to have llvm first in your PATH, run:
+#   echo 'export PATH="/usr/local/opt/llvm/bin:$PATH"' >> ~/.zshrc
+
+# For compilers to find llvm you may need to set:
+#   export LDFLAGS="-L/usr/local/opt/llvm/lib"
+#   export CPPFLAGS="-I/usr/local/opt/llvm/include"
+# export PATH="/Users/sne/.cargo/bin:/Users/sne/.pyenv/shims:/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/share/dotnet:~/.dotnet/tools:/Library/Apple/usr/bin:/Library/Frameworks/Mono.framework/Versions/Current/Commands"
+# export PATH="/Users/sne/.cargo/bin:$PATH"
